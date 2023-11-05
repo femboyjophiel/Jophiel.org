@@ -166,6 +166,52 @@ function updateStats() {
           console.error('Error:', error);
       });
 }
+      const audio = document.getElementById("music");
+              const playPauseButton = document.querySelector(".play-pause-button");
+              const volumeSlider = document.querySelector(".volume-slider");
+              const timeDisplay = document.querySelector(".time-display");
 
+              // Update the time display
+              function updateTimes() {
+                const currentTime = formatTime(audio.currentTime);
+                const duration = formatTime(audio.duration);
+                timeDisplay.textContent = currentTime + " / " + duration;
+              }
+
+              // Format time in MM:SS
+              function formatTime(time) {
+                const minutes = Math.floor(time / 60);
+                const seconds = Math.floor(time % 60);
+                return minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+              }
+
+              // Toggle play/pause
+              playPauseButton.addEventListener("click", () => {
+                if (audio.paused) {
+                  updateTimes();
+                  audio.play();
+                  playPauseButton.textContent = "❚❚";
+                } else {
+                  audio.pause();
+                  playPauseButton.textContent = "▶";
+                }
+              });
+const sym = document.querySelector("#audioIcon")
+              // Update volume on slider change
+  volumeSlider.addEventListener("input", () => {
+    audio.volume = volumeSlider.value;
+    if (volumeSlider.value < 0.01) {
+      sym.innerHTML = "🔇"
+    } else if (volumeSlider.value < 0.3) {
+      sym.innerHTML = "🔈"
+    } else if (volumeSlider.value < 0.6) {
+      sym.innerHTML = "🔉"
+    } else {
+      sym.innerHTML = "🔊"
+    }
+  });
+
+              // Update time display on timeupdate
+              audio.addEventListener("timeupdate", updateTimes);
 // Call the updateStats function when the page loads
 window.onload = updateStats;

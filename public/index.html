@@ -123,8 +123,8 @@
                 <a href="#" target="_blank" draggable="false" aria-label="Github Stats">
                     <div id="codeCampContainer" ><h3>Jophiel's FreeCodeCamp Stats</h3>
                       <div id='codeCampStats'>
-                      <div>Points:</div><div id='codeCampPoints'>466</div>
-                      <div>Current Streak:</div><div id='codeCampCurrentStreak'>0</div>
+                      <div>Points:</div><div id='codeCampPoints'>541</div>
+                      <div>Current Streak:</div><div id='codeCampCurrentStreak'>1</div>
                       <div>Longest Streak:</div><div id='codeCampLongestStreak'>4</div>
                       </div>
 </div>
@@ -221,64 +221,8 @@
               </div>
             </div>
 
-            <script>
-              const audio = document.getElementById("music");
-              const playPauseButton = document.querySelector(".play-pause-button");
-              const volumeSlider = document.querySelector(".volume-slider");
-              const timeDisplay = document.querySelector(".time-display");
-
-              // Update the time display
-              function updateTimes() {
-                const currentTime = formatTime(audio.currentTime);
-                const duration = formatTime(audio.duration);
-                timeDisplay.textContent = currentTime + " / " + duration;
-              }
-
-              // Format time in MM:SS
-              function formatTime(time) {
-                const minutes = Math.floor(time / 60);
-                const seconds = Math.floor(time % 60);
-                return minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
-              }
-
-              // Toggle play/pause
-              playPauseButton.addEventListener("click", () => {
-                if (audio.paused) {
-                  updateTimes();
-                  audio.play();
-                  playPauseButton.textContent = "❚❚";
-                } else {
-                  audio.pause();
-                  playPauseButton.textContent = "▶";
-                }
-              });
-const sym = document.querySelector("#audioIcon")
-              // Update volume on slider change
-  volumeSlider.addEventListener("input", () => {
-    audio.volume = volumeSlider.value;
-    if (volumeSlider.value < 0.01) {
-      sym.innerHTML = "🔇"
-    } else if (volumeSlider.value < 0.3) {
-      sym.innerHTML = "🔈"
-    } else if (volumeSlider.value < 0.6) {
-      sym.innerHTML = "🔉"
-    } else {
-      sym.innerHTML = "🔊"
-    }
-  });
-
-              // Update time display on timeupdate
-              audio.addEventListener("timeupdate", updateTimes);
-              
-            </script>
           </div>
-<!--
-            <div style="--columns: 4; --rows: 1;">
-                <a href="#" target="_blank" draggable="false" style="--padding: 10px; --bg-color: #000;" aria-label="Visitor Counter">
-                    <div style="--bg: url(/count);"></div>
-                </a>
-            </div>
--->
+
             <div>
                 <a href="https://twitter.com/femboyjophiel" target="_blank" draggable="false">
                     <div>
@@ -311,37 +255,7 @@ const sym = document.querySelector("#audioIcon")
           </div>
 
 
-           <!-- <div style="--columns: 4; --rows: 1;">
-                <a href="/skin/Chino.osk" target="_blank" draggable="false">
-                    <div>
-                        <div class="icon" style="--bg: #f6a; --size: 70%;">
-                            <svg fill="currentColor" viewBox="0 0 612 612">
-                                <path d="M306 0C137 0 0 137 0 306s137 306 306 306 306-137 306-306S475 0 306 0Zm0 542C176 542 70 436 70 306S176 70 306 70s236 106 236 236-106 236-236 236Zm0-402c-92 0-166 74-166 166s74 166 166 166 166-74 166-166-74-166-166-166Z"></path>
-                            </svg>
-                        </div>
-                        <div class="meta">
-                            <b>Chino Kafuu osu! skin</b>
-                            <div>Gotchuumon wa Usagi desu ka?</div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div style="--columns: 4; --rows: 1;">
-                <a href="/skin/Mahiru.osk" target="_blank" draggable="false">
-                    <div>
-                        <div class="icon" style="--bg: #f6a; --size: 70%;">
-                            <svg fill="currentColor" viewBox="0 0 612 612">
-                                <path d="M306 0C137 0 0 137 0 306s137 306 306 306 306-137 306-306S475 0 306 0Zm0 542C176 542 70 436 70 306S176 70 306 70s236 106 236 236-106 236-236 236Zm0-402c-92 0-166 74-166 166s74 166 166 166 166-74 166-166-74-166-166-166Z"></path>
-                            </svg>
-                        </div>
-                        <div class="meta">
-                            <b>Mahiru Shiina osu! skin</b>
-                            <div>Otonari no Tenshi-sama</div>
-                        </div>
-                    </div>
-                </a>
-            </div> -->
+      
         </main>
 
         <aside>
@@ -394,106 +308,7 @@ const sym = document.querySelector("#audioIcon")
                     </div>
                 </a>
             </div>
-          <!--
-            <div>
-                <a href="https://github.com/AutumnVN/loli" target="_blank" draggable="false">
-                    <b>AutumnVN/loli</b>
-                    <div>A Minecraft client mod</div>
-                    <div class="meta">
-                        <div class="star">
-                            <svg fill="currentColor" viewBox="0 0 16 16" height="1em" width="1em">
-                                <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25"></path>
-                            </svg>
-                            <span>-</span>
-                        </div>
-                        <div class="fork">
-                            <svg fill="currentColor" viewBox="0 0 16 16" height="1em" width="1em">
-                                <path d="M5 5.372a2.25 2.25 0 1 0-1.5 0v.878A2.25 2.25 0 0 0 5.75 8.5h1.5v2.128a2.251 2.251 0 1 0 1.5 0V8.5h1.5a2.25 2.25 0 0 0 2.25-2.25v-.878a2.25 2.25 0 1 0-1.5 0v.878a.75.75 0 0 1-.75.75h-4.5A.75.75 0 0 1 5 6.25v-.878"></path>
-                            </svg>
-                            <span>-</span>
-                        </div>
-                        <div class="lang">
-                            <span style="background-color: #b71;"></span>
-                            Java
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div>
-                <a href="https://github.com/Vendicated/Vencord" target="_blank" draggable="false">
-                    <b>Vendicated/Vencord</b>
-                    <div>The cutest Discord client mod</div>
-                    <div class="meta">
-                        <div class="star">
-                            <svg fill="currentColor" viewBox="0 0 16 16" height="1em" width="1em">
-                                <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25"></path>
-                            </svg>
-                            <span>-</span>
-                        </div>
-                        <div class="fork">
-                            <svg fill="currentColor" viewBox="0 0 16 16" height="1em" width="1em">
-                                <path d="M5 5.372a2.25 2.25 0 1 0-1.5 0v.878A2.25 2.25 0 0 0 5.75 8.5h1.5v2.128a2.251 2.251 0 1 0 1.5 0V8.5h1.5a2.25 2.25 0 0 0 2.25-2.25v-.878a2.25 2.25 0 1 0-1.5 0v.878a.75.75 0 0 1-.75.75h-4.5A.75.75 0 0 1 5 6.25v-.878"></path>
-                            </svg>
-                            <span>-</span>
-                        </div>
-                        <div class="lang">
-                            <span style="background-color: #37c;"></span>
-                            TypeScript
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div>
-                <a href="https://github.com/Vencord/vencord.dev" target="_blank" draggable="false">
-                    <b>Vencord/vencord.dev</b>
-                    <div>Vencord's official website</div>
-                    <div class="meta">
-                        <div class="star">
-                            <svg fill="currentColor" viewBox="0 0 16 16" height="1em" width="1em">
-                                <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25"></path>
-                            </svg>
-                            <span>-</span>
-                        </div>
-                        <div class="fork">
-                            <svg fill="currentColor" viewBox="0 0 16 16" height="1em" width="1em">
-                                <path d="M5 5.372a2.25 2.25 0 1 0-1.5 0v.878A2.25 2.25 0 0 0 5.75 8.5h1.5v2.128a2.251 2.251 0 1 0 1.5 0V8.5h1.5a2.25 2.25 0 0 0 2.25-2.25v-.878a2.25 2.25 0 1 0-1.5 0v.878a.75.75 0 0 1-.75.75h-4.5A.75.75 0 0 1 5 6.25v-.878"></path>
-                            </svg>
-                            <span>-</span>
-                        </div>
-                        <div class="lang">
-                            <span style="background-color: #f50;"></span>
-                            Astro
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div>
-                <a href="https://github.com/ppy/osu-wiki" target="_blank" draggable="false">
-                    <b>ppy/osu-wiki</b>
-                    <div>home of the osu! wiki</div>
-                    <div class="meta">
-                        <div class="star">
-                            <svg fill="currentColor" viewBox="0 0 16 16" height="1em" width="1em">
-                                <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25"></path>
-                            </svg>
-                            <span>-</span>
-                        </div>
-                        <div class="fork">
-                            <svg fill="currentColor" viewBox="0 0 16 16" height="1em" width="1em">
-                                <path d="M5 5.372a2.25 2.25 0 1 0-1.5 0v.878A2.25 2.25 0 0 0 5.75 8.5h1.5v2.128a2.251 2.251 0 1 0 1.5 0V8.5h1.5a2.25 2.25 0 0 0 2.25-2.25v-.878a2.25 2.25 0 1 0-1.5 0v.878a.75.75 0 0 1-.75.75h-4.5A.75.75 0 0 1 5 6.25v-.878"></path>
-                            </svg>
-                            <span>-</span>
-                        </div>
-                        <div class="lang">
-                            <span style="background-color: #04a;"></span>
-                            Markdown
-                        </div>
-                    </div>
-                </a>
-            </div> -->
+        
         </aside>
     </div>
 
