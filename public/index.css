@@ -23,7 +23,7 @@
 }
 
 :root {
-    --background: url('/bg.webp');
+    --background: url('bg.webp');
     --card: #ecfb;
     --clock: #f9f;
     font-weight: 500;
@@ -32,7 +32,7 @@
 }
 @media (orientation: portrait) {
     :root {
-        --background: url('/bg.png');
+        --background: url('bg.png');
     }
   #background>div {
     background-position: center 0px !important;
